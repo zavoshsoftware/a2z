@@ -1,0 +1,58 @@
+﻿@model ViewModels.AboutViewModel
+@{
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content" id="about-us">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+
+            <!-- breadcrumb -->
+            <nav class="breadcrumb-bg">
+                <div class="container no-index">
+                    <div class="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="/">
+                                    <span>صفحه اصلی</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>درباره ما</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+            <div id="main">
+                <div class="page-home">
+                    <div class="container">
+                        <div class="about-us-content">
+
+                            @*<h1 class="title-page">درباره ما</h1>*@
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 right">
+                                    <a href="#">
+                                        <img class="img-fluid" src="@Model.About.ImageUrl" alt="#" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 left">
+                                    <div class="cms-block f-right">
+                                        <h1 class="page-subheading">@Model.About.Title</h1>
+                                        <p>
+                                            @Html.Raw(Model.About.Body)
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

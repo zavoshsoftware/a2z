@@ -1,0 +1,153 @@
+﻿@model ViewModels.ContactViewModel
+@{
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+
+            <!-- breadcrumb -->
+            <nav class="breadcrumb-bg">
+                <div class="container no-index">
+                    <div class="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="/">
+                                    <span>صفحه اصلی</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>تماس با ما</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+            <div id="main">
+                <div class="page-home">
+                    <div class="container">
+                        <h1 class="text-center title-page">تماس با ما</h1>
+                        <div class="row-inhert">
+                            <div class="header-contact">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4 col-md-4">
+                                        <div class="item d-flex contact-info">
+                                            <div class="item-left">
+                                                <div class="icon">
+                                                    <i class="zmdi zmdi-email"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-right d-flex">
+                                                <div class="title">کانال تلگرام:</div>
+                                                <div class="contact-content">
+                                                    @Html.Raw(Model.ContactInfo.Telegram)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-6">
+                                        <div class="item d-flex  contact-info">
+                                            <div class="item-left">
+                                                <div class="icon">
+                                                    <i class="zmdi zmdi-home"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-right d-flex">
+                                                <div class="title">دفتر مرکزی: </div>
+                                                <div class="contact-content">
+                                                   @Html.Raw(Model.ContactInfo.Address1)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item d-flex contact-info">
+                                            <div class="item-left">
+                                                <div class="icon">
+                                                    <i class="zmdi zmdi-home"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-right d-flex">
+                                                <div class="title"> نمایشگاه مرکزی: </div>
+                                                <div class="contact-content">
+                                                    @Html.Raw(Model.ContactInfo.Address2) 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-2">
+                                        <div class="item d-flex justify-content-end  last contact-info">
+                                            <div class="item-left">
+                                                <div class="icon">
+                                                    <i class="zmdi zmdi-phone"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-right d-flex">
+                                                <div class="title">تلفن:</div>
+                                                <div class="contact-content">
+                                                  @Html.Raw(Model.ContactInfo.Phone)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-map">
+                                <div id="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.846879056792!2d51.417734215204064!3d35.70538548018863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e01730109812d%3A0xfe3d879c7d7b08a9!2sTehran+Province%2C+Tehran%2C+District+6%2C+Somayyeh+St%2C+Iran!5e0!3m2!1sen!2s!4v1564989123366!5m2!1sen!2s" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="input-contact">
+                                <p class="text-intro text-center">
+                                    با مبلمان فضای باز صنیع کار در تماس باشید ...
+                                </p>
+
+                                <p class="icon text-center">
+                                    <a href="#">
+                                        <img src="/content/img/other/contact_mess.png" alt="img">
+                                    </a>
+                                </p>
+
+                                <div class="d-flex justify-content-center">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="contact-form">
+                                            <form action="index.html" method="post" enctype="multipart/form-data">
+                                                <div class="form-fields">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-6">
+                                                            <input class="form-control" name="name" placeholder="نام و نام خانوادگی">
+                                                        </div>
+                                                        <div class="col-md-6 margin-bottom-mobie">
+                                                            <input class="form-control" name="from" type="email" value="" placeholder="ایمیل">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-12 margin-bottom-mobie">
+                                                            <input class="form-control" name="from" type="email" value="" placeholder="موضوع">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" name="message" placeholder="پیغام" rows="8"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn" type="submit" name="submitMessage">
+                                                        <img class="img-fl" src="/content/img/other/contact_email.png" alt="img">ارسال
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

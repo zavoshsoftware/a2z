@@ -1,0 +1,215 @@
+﻿@model ViewModels.BlogDetailViewModel
+@{
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+            <div id="main">
+                <div class="page-home">
+
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>صفحه اصلی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>@Model.blog.BlogGroup.Title</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>@Model.blog.Title</span>
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+
+                                    <!-- category -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">دسته بندی مقالات</div>
+                                        <div class="block-content">
+                                            @foreach (var category in Model.Categories)
+                                            {
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapse-icons collapsed" data-toggle="collapse" data-target="#@category.BlogGroup.Id" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">@category.BlogGroup.Title</a>
+                                                <div class="subCategory collapse" id="@category.BlogGroup.Id" aria-expanded="true" role="status">
+                                                   @foreach (var blog in category.Blogs)
+                                                   {
+                                                    <div class="cateTitle">
+                                                        <a href="/blog/@blog.UrlParam" class="cateItem">@blog.Title</a>
+                                                    </div>
+                                                   }
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+
+
+                                    <!-- recent posts -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">جدیدترین مقالات</div>
+                                        <div class="post-item-content">
+                                            @foreach (var blog in Model.Recent)
+                                            {
+                                            <div>
+                                                <div class="late-item first-child">
+                                                    <a href="/blog/@blog.UrlParam">
+                                                        <p class="content-title">@blog.Title</p>
+                                                    </a>
+                                                    <span>
+                                                        <i class="zmdi zmdi-comments"></i>@blog.BlogComments.Count() یادداشت
+                                                    </span>
+                                                    <span>
+                                                        <i class="zmdi zmdi-calendar-note"></i>@blog.CreationDate.ToShortDateString()
+                                                    </span>
+                                                    <p class="description">
+                                                      @Html.Raw(blog.Summery)
+                                                    </p>
+                                                    <p class="remove">
+                                                        <a href="/blog/@blog.UrlParam">ادامه مطلب</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                                <div class="col-sm-8 col-lg-9 col-md-9 flex-xs-first main-blogs">
+                                    <h1>@Model.blog.Title</h1>
+                                    <div class="hover-after">
+                                        <img src="@Model.blog.ImageUrl" alt="img" class="img-fluid">
+                                    </div>
+                                    <div class="late-item">
+                                        <p>
+                                            @Html.Raw(Model.blog.Body)
+                                        </p>
+                                       
+                                        <div class="border-detail">
+                                            <p class="post-info float-left">
+                                                <span>@Model.blog.CreationDate.ToShortDateString()</span>
+                                                <span>@Model.blog.BlogComments.Count() یادداشت</span>
+                                            </p>
+                                            <div class="btn-group">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-share"></i>
+                                                    <span>اشتراک گذاری</span>
+                                                </a>
+                                                <a href="#" class="email">
+                                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                    <span>ایمیل</span>
+                                                </a>
+                                                <a href="#" class="print">
+                                                    <i class="zmdi zmdi-print"></i>
+                                                    <span>پرینت</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   
+                                    <div class="related">
+                                        <h2 class="title-block">مقالات مرتبط</h2>
+                                        <div class="main-blogs">
+                                            <div class="row">
+                                                @foreach (var blog in Model.Related)
+                                                {
+                                                <div class="col-md-4">
+                                                    <div class="hover-after">
+                                                        <a href="blog-detail.html">
+                                                            <img src="@blog.ImageUrl" alt="img" class="img-fluid">
+                                                        </a>
+                                                    </div>
+                                                    <div class="late-item">
+                                                        <p class="content-title">
+                                                            <a href="/blog/@blog.UrlParam">@blog.Title</a>
+                                                        </p>
+                                                        <p class="description">
+                                                           @blog.Summery
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reply late-item">
+                                        <div class="blog-comment" id="blog-comment">
+                                            <h2 class="title-block">یاداشت ها</h2>
+                                            @*<img src="/content/img/blog/user1.jpg" alt="img" class="float-left right">*@
+                                        </div>
+                                        @foreach (var blog in Model.Comments)
+                                        {
+                                        <div class="comment-content">
+                                            <p class="user-title">
+                                                <a href="#">@blog.Name</a>
+                                                <span class="time">
+                                                   @blog.CreationDate.ToShortDateString()
+                                                    @*<a href="#">repost</a> /
+                                                    <span class="green">
+                                                        <a href="#">Reply</a>
+                                                    </span>*@
+                                                </span>
+                                            </p>
+                                            <p class="content-comment">
+                                             @Html.Raw(blog.Message)
+                                            </p>
+                                        </div>
+                                        }
+                                    </div>
+                                    <div class="submit-comment" id="respond">
+                                        <h2 class="title-block">یادداشت شما</h2>
+                                        <div id="commentInput">
+                                            <form action="index.html" method="post" id="commentform">
+                                                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                                <div class="row">
+                                                    <div class="form-group col col-sm-12 col-md-4 ">
+                                                        <input type="text" class="inputName form-control" name="name" placeholder="نام و نام خانوادگی">
+                                                    </div>
+                                                    <div class="form-group col col-sm-12  col-md-4">
+                                                        <input type="text" class="inputMail form-control" name="mail" placeholder="ایمیل">
+                                                    </div>
+                                                    <div class="form-group col col-sm-12  col-md-4">
+                                                        <input type="text" class="form-control" name="website" placeholder="موضوع">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col col-md-12">
+                                                        <textarea tabindex="4" class="inputContent form-control grey" rows="10" name="comment" placeholder="یادداشت"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="submit">
+                                                    <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="ارسال">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

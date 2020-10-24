@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Furnitica - Minimalist Furniture HTML Template Documentation</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Serif" rel="stylesheet">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/app.css" rel="stylesheet">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div class="container">
+				<h5 class="center alt">&ldquo;Furnitica - Minimalist Furniture HTML Template&rdquo; Documentation by &ldquo;TivaTheme&rdquo; v1.0</h5>
+			</div>
+			<section id="content">
+					<header id="header" class="container">
+						<h2 class="center">Furnitica - Minimalist Furniture HTML Template</h2>
+					</header><!-- /header -->
+					
+					<section class="container theme-info">
+						<div class="col-sm-3 col-md-3 info panel-body border-right">
+							<p>Created: <strong>25/09/2018</strong></p>
+							<p>By: <strong>TivaTheme</strong></p>
+							<p><a href="mailto:tivatheme@gmail.com">tivatheme@gmail.com</a></p>
+						</div><!-- end div .span-6 -->		
+				
+						<div class="col-sm-9 col-md-9 panel-body">
+							<p class="prepend-top append-0">Thank you for purchasing Ideabox theme. If you have any questions that are beyond the scope of this help file, please feel free to email via <a href="mailto:tivatheme@gmail.com">tivatheme@gmail.com</a>. Thank you very much!</p>
+						</div>
+					</section>
+
+					<div id="documantation" class="container">
+						<article class="col-sm-9 col-md-9">
+							<!----------- Getting Started ------------>
+							<div id="getting-started" class="content-block">
+								<h1 class="page-header">Getting Started</h1>
+								
+								<p><img src="http://tivatheme.com/img/furnitica-1.png" alt="Furnitica - Minimalist Furniture HTML Template"></p>
+							</div>
+							
+							<!----------- Files Structure ------------>
+							<div id="files_structure" class="content-block">
+								<h1 class="page-header">Files Structure</h1>
+								
+								<ul>
+									<li><code>/HTML</code>
+										<ul>
+											<li><code>/css</code> (Template CSS)</li>
+											<li><code>/img</code> (All Images)</li>
+											<li><code>/js</code> (Template JS)</li>
+											<li><code>/libs</code> (All external libs. We keep all of them in this folder to make updates easily.)</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							
+							<!----------- HTML Structure ------------>
+							<div id="html_structure" class="content-block">
+								<h1 class="page-header">HTML Structure</h1>
+								
+								<p>We are using Bootstrap framework. So, basic HTML structure is same as it is used in Bootstrap.</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!-- Bootstrap & Other CSS files --&gt;
+	&lt;/head&gt;
+	&lt;body id=&quot;home&quot; &gt;		
+		&lt;header id=&quot;top-header&quot; class=&quot;clearfix&quot;&gt;
+			&lt;!-- Logo, Menu, Search, Cart ... --&gt;
+		&lt;/header&gt;
+		
+		&lt;div class=&quot;main-content&quot;&gt;
+			&lt;!-- Main Content --&gt;
+		&lt;/div&gt;
+		
+		&lt;footer id=&quot;footer&quot;&gt;
+			&lt;!-- Footer Menu, Copyright --&gt;
+		&lt;/footer&gt;
+		
+		&lt;div class=&quot;back-to-top&quot;&gt;
+			&lt;!-- Go To Top button --&gt;
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;mobile-top-menu&quot;&gt;
+			&lt;!-- Mobile Left Menu --&gt;
+		&lt;/div&gt;
+		
+		&lt;div id=&quot;mobile-pagemenu&quot;&gt;
+			&lt;!-- Mobile Main Menu --&gt;
+		&lt;/div&gt;
+		
+		&lt;div id=&quot;page-preloader&quot;&gt;
+			&lt;!-- Page Loader --&gt;
+		&lt;/div&gt;
+		
+		&lt;!-- Include JS files --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+							</div>
+							
+							<!----------- CSS Structure ------------>
+							<div id="css_structure" class="content-block">
+								<h1 class="page-header">CSS Structure</h1>
+								
+								<p>The organization of the CSS is one of our priorities.</p>
+								<p>These are the CSS file we're using in the template:</p>
+								<ul>
+									<li><code>style.css</code> - (Main style)</li>
+									<li><code>responsive.css</code> (Responsive)</li>
+								</ul>
+							</div>
+							
+							<!----------- Customization & Styles ------------>
+							<div id="customization_styles" class="content-block">
+								<h1 class="page-header">Customization & Styles</h1>
+								
+								<h4>Fonts</h4>
+								<p>To change the embedded font, please take a look in the head part of the website and you will find this tag:</p>
+<pre>
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+</pre>
+								<p>To change the font, first go to http://www.google.com/webfonts choose a font and use the generated code.</p>
+							</div>
+							
+							<!----------- Icons ------------>
+							<div id="icons" class="content-block">
+								<h1 class="page-header">Icons</h1>
+								
+								<p>1. <strong>Font Awesome</strong> is a @font-face iconset that you can change size and color of the icons using CSS.
+									If you need more information, please visit this site:
+									<br><a href="http://fontawesome.io/">Fontawesome/</a>
+								</p>
+								<pre>&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;<br>&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;<br>...
+								</pre>
+								
+								<p>2. <strong>Material Design</strong> is a @font-face iconset that you can change size and color of the icons using CSS.
+									If you need more information, please visit this site:
+									<br><a href="https://material.io/">Material Design/</a>
+								</p>
+								<pre>&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt;<br>&lt;i class=&quot;zmdi zmdi-phone-in-talk&quot;&gt;&lt;/i&gt;<br>...
+								</pre>
+							</div>
+							
+							<!----------- Source & Credits ------------>
+							<div id="source_credits" class="content-block">
+								<h1 class="page-header">Source & Credits</h1>
+								
+								<div role="alert" class="alert alert-warning">
+									The images included in preview are for demonstration purposes and should always be replaced with your own work.
+								</div>
+								<ul>
+									<li>
+										<strong>Fonts:</strong>
+										<ul>
+											<li>Google Fonts - <a href="http://www.google.com/webfonts" target="_blank">http://www.google.com/webfonts</a></li>
+											<li>Icons Font-face - <a href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a></li>
+											<li>Icons Font-face - <a href="https://material.io/" target="_blank">https://material.io/</a></li>
+										</ul>
+									</li>
+									<li>
+										<strong>Scripts:</strong>
+										<ul>
+											<li>jQuery - <a href="http://www.jquery.com/" target="_blank">http://www.jquery.com/</a></li>
+											<li>Bootstrap 4 - <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
+											<li>Owl Carousel - <a href="http://www.owlgraphic.com/owlcarousel2/" target="_blank">http://www.owlgraphic.com/owlcarousel2/</a></li>
+											<li>Nivo Slider - <a href="https://github.com/Codeinwp/Nivo-Slider-jQuery/" target="_blank">https://github.com/Codeinwp/Nivo-Slider-jQuery/</a></li>
+											<li>Slick Slider - <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							
+							<!----------- Getting Support ------------>
+							<div id="get_support" class="content-block">
+								<h1 class="page-header">Getting Support</h1>
+								
+								<p>If you are unable to find your answer here in our documentation, feel free to ask for help from our support team, all you have to do is contact with us via email <a href="mailto:tivatheme@gmail.com">tivatheme@gmail.com</a>.</p>
+					
+								<h3>Our support scope</h3>
+
+								<p>Our support covers configuration, building site as demo, trouble using any features, and bug fixes. We don't provide support for customizations.</p>
+
+								<h3>Our support time</h3>
+
+								<p>We try our best to monitor the email around the clock, however, this is not always possible due to different time zones. We will try to reply you as fast as we can.</p>
+
+								<p>Our working time is 8.00 AM - 5.30 PM, Monday to Friday (GMT+7). So if ask for help in the weekend, you may have to wait a little bit for support and please be patient.</p>								
+							</div>
+						</article>
+						
+						<aside id="sidebar" class="col-sm-3 col-md-3">
+							<nav class="navbar">
+								<ul class="nav nav-stacked">
+									<li><a href="#getting-started">Getting Started</a></li>
+									<li><a href="#files_structure">Files Structure</a></li>
+									<li><a href="#html_structure">HTML Structure</a></li>
+									<li><a href="#css_structure">CSS Structure</a></li>
+									<li><a href="#customization_styles">Customization & Styles</a></li>
+									<li><a href="#icons">Icons</a></li>
+									<li><a href="#source_credits">Source & Credits</a></li>
+									<li><a href="#get_support">Getting Support</a></li>
+								</ul>
+							</nav>
+						</aside>
+					</div>
+					
+				</div>
+				
+			</section>
+		</main>
+	</body>
+</html>

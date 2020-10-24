@@ -1,0 +1,594 @@
+﻿@font-face {
+    font-family: 'IRANSansWebFaNum';
+    src: url('../fonts/IranSans/IRANSansWebFaNum.ttf') format('truetype'), url('../fonts/IranSans/IRANSansWebFaNum.eot') format('embedded-opentype'), url('../fonts/IranSans/IRANSansWebFaNum.woff') format('woff'), url('../fonts/IranSans/IRANSansWebFaNum.woff2') format('woff2');
+}
+
+@media screen and (max-width: 767px) {
+    #mobile-pagemenu .content-boxpage .box-header {
+        direction: rtl;
+    }
+
+    #mobile-pagemenu .content-boxpage .box-content .clearfix .menu .item .arrow {
+        left: 15px;
+        right: unset;
+    }
+
+    #mobile-pagemenu .content-boxpage .box-content .clearfix .menu .has-sub {
+        direction: rtl;
+        text-align: right;
+    }
+
+    #mobile-pagemenu .content-boxpage .box-content .clearfix .menu .item .subCategory ul {
+        padding-right: 30px;
+        padding-left: unset;
+    }
+
+    .mobile-search {
+        text-align: right;
+        direction: rtl;
+    }
+
+    .header-mobile #mobile_search_content button {
+        left: 14px;
+        right: unset;
+    }
+
+    .mobile-top-menu .block-content .verticalmenu .menu .item a {
+        text-align: right;
+        font-family: IRANSansWebFaNum;
+        direction: rtl;
+    }
+
+    .mobile-top-menu .block-content .verticalmenu .hasicon img {
+        margin-left: 17px;
+        margin-right: unset;
+    }
+
+    #mobile-pagemenu .content-boxpage .box-header .title-box {
+        font-family: IRANSansWebFaNum;
+    }
+
+    #product-detail .content .main-product-detail .product-info .detail-description .has-border .product-quantity .quantity {
+        float: right;
+    }
+
+    .quantity .form-control {
+        float: right;
+    }
+
+        .quantity .form-control:not(:first-child):not(:last-child) {
+            border-radius: 0 5px 5px 0;
+        }
+
+    .quantity .input-group-btn-vertical .btn.bootstrap-touchspin-up {
+        border-radius: 3px 0 0 0;
+    }
+
+    .quantity .input-group-btn-vertical .btn.bootstrap-touchspin-down {
+        border-radius: 0 0 0px 3px;
+    }
+}
+
+body {
+    font-family: IRANSansWebFaNum;
+}
+
+.main-menu .menu .menu-top li .parent {
+    font-family: IRANSansWebFaNum;
+}
+
+.main-menu .menu .menu-top {
+    direction: rtl;
+}
+
+.dropdown-menu {
+    right: 21px;
+    left: unset;
+}
+
+.main-login {
+    left: 33%;
+}
+
+.login-form {
+    text-align: right;
+    direction: rtl;
+}
+
+.field-input {
+    margin-bottom: 7px;
+}
+
+.main-menu .menu .menu-top li .dropdown-menu ul .item {
+    text-align: right;
+    direction: rtl;
+}
+
+.drop-tab {
+    right: 0px;
+}
+
+.desktop_cart .header-cart {
+    padding-right: 30px;
+    border-right: 1px solid #d4d4d4;
+    padding-left: unset;
+    border-left: unset;
+}
+
+#search_widget form {
+    margin-left: 30px;
+    margin-right: unset;
+}
+
+.menu-account {
+    margin-left: 20px;
+}
+
+#acount .account-list-content div, #currency .account-list-content div, #language .account-list-content div {
+    text-align: right;
+    direction: rtl;
+}
+
+#home .wrap-banner .position .menu-banner {
+    right: 4%;
+    left: unset;
+}
+
+.menu-banner .verticalmenu .menu li .dropdown-menu, .menu-banner .verticalmenu .menu li .dropdown-submenu {
+    left: inherit;
+    right: 106%;
+}
+
+.policy-home .block .block-content .policy-item .policy-content img {
+    float: right;
+    margin-left: 27px;
+}
+
+.policy-home .block .block-content .policy-item .policy-content .policy-name {
+    text-align: right;
+    direction: rtl;
+}
+
+.policy-des {
+    text-align: right;
+    direction: rtl;
+}
+
+#wrapper-site #content-wrapper #main .living-room .groupcategoriestab-vertical .grouptab .flex-3 .cate-child-vertical ul {
+    text-align: right;
+    direction: rtl;
+}
+
+.block-title-content {
+    width: 100%;
+}
+
+#wrapper-site #content-wrapper #main .living-room .groupcategoriestab-vertical .grouptab .flex-3 .block-title-content .title-block {
+    text-align: right;
+    direction: rtl;
+}
+
+#wrapper-site #content-wrapper #main .living-room .groupcategoriestab-vertical .grouptab .flex-3 .cate-child-vertical {
+    min-width: 254px;
+}
+
+#wrapper-site #content-wrapper #main .recent-post .item-post .post-content .post-info {
+    text-align: right;
+    direction: rtl;
+}
+
+#wrapper-site #content-wrapper #main .recent-post .item-post .post-content .post-title, #wrapper-site #content-wrapper #main .recent-post .item-post .post-content .post-desc {
+    text-align: right;
+    direction: rtl;
+}
+
+.footer-one .inner-footer .footer-top .block-content .logo-footer {
+    text-align: right;
+}
+
+.footer-one .inner-footer .footer-top .block-content .content-logo {
+    text-align: justify;
+    direction: rtl;
+}
+
+.footer-one .inner-footer .footer-top .block-content ul {
+    text-align: right;
+    direction: rtl;
+}
+
+footer .title-block, .footer-one .inner-footer .footer-top .block-content .contact-us {
+    text-align: right;
+    direction: rtl;
+}
+
+    .footer-one .inner-footer .footer-top .block-content .contact-us .content-contact {
+        margin-right: 7px;
+        padding-right: 20px;
+        border-right: 1px solid #d5d5d5;
+        margin-left: unset;
+        padding-left: unset;
+        border-left: unset;
+    }
+
+.sub-title {
+    text-align: justify;
+    direction: rtl;
+}
+
+.block-newsletter .input-group {
+    direction: rtl;
+}
+
+.input-group > .custom-select:not(:last-child), .input-group > .form-control:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+.block-newsletter .input-group input {
+    border-bottom-right-radius: 23px !important;
+    border-top-right-radius: 23px !important;
+}
+
+.block-newsletter .input-group .input-group-btn .btn-secondary {
+    border-radius: 23px 0 0 23px !important;
+}
+
+#search_widget form input {
+    text-align: right;
+    direction: rtl;
+    padding: 9px 15px 9px 40px;
+}
+
+#search_widget form button {
+    left: 11px;
+    right: unset;
+}
+
+#description p {
+    text-align: right;
+    direction: rtl;
+}
+.tab-content .item .product-miniature .product-description .product-groups .product-title 
+{
+    font-family:IRANSansWebFaNum;
+}
+
+
+    .tab-content .item .product-miniature .product-description .product-groups .product-title a, .tab-content .item .product-miniature .product-description .product-groups .product-group-price .price {
+        font-family: IRANSansWebFaNum;
+    }
+
+#wrapper-site #content-wrapper #main .testimonial-block .desc-testimonial .text {
+    font-family: IRANSansWebFaNum;
+    direction: rtl;
+}
+
+#wrapper-site #content-wrapper #main .best-sellers .groupproductlist .flex-4 .title-block .sub-title, .title-block {
+    font-family: IRANSansWebFaNum;
+}
+
+#wrapper-site #content-wrapper #main .living-room .groupcategoriestab-vertical .grouptab .flex-3 .block-title-content .title-block {
+    font-family: IRANSansWebFaNum;
+}
+
+.menu-banner .verticalmenu .menu > li > a {
+    padding: 12px 57px 12px 0;
+    text-align: right;
+    font-family: IRANSansWebFaNum;
+}
+
+.menu-banner .verticalmenu .menu li .hasicon img {
+    right: 10px;
+    left: unset;
+}
+
+.main-content {
+    padding-bottom: 70px;
+}
+
+.footer-one, footer .title-block, .block-newsletter .input-group .input-group-btn .btn-secondary {
+    font-family: IRANSansWebFaNum;
+}
+
+.breadcrumb-bg .breadcrumb {
+    text-align: right;
+    direction: rtl;
+}
+
+    .breadcrumb-bg .breadcrumb ol {
+        text-align: right;
+        font-family: IRANSansWebFaNum;
+    }
+
+        .breadcrumb-bg .breadcrumb ol li:first-child {
+            padding-left: 14px;
+            padding-right: unset;
+        }
+
+        .breadcrumb-bg .breadcrumb ol li::after {
+            left: -13px;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            font-size: 1.6rem;
+            width: 5px;
+            height: 5px;
+            background: #6c6c6c;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            line-height: 1.6rem;
+        }
+
+        .breadcrumb-bg .breadcrumb ol li:last-child::after {
+            content: unset;
+        }
+
+#about-us .page-home .page-subheading {
+    text-align: right;
+}
+
+#about-us .page-home p {
+    text-align: justify;
+    direction: rtl;
+}
+
+.contact-info {
+    direction: rtl;
+}
+
+#contact .main-content .page-home .input-contact .form-group .form-control {
+    text-align: right;
+}
+
+#contact .main-content .page-home .input-contact .text-intro {
+    direction: rtl;
+}
+
+.page-home .btn {
+    font-family: IRANSansWebFaNum;
+}
+
+.sidebar-3 .sidebar-block .title-block {
+    text-align: right;
+    font-family: IRANSansWebFaNum;
+}
+
+.sidebar-3 .sidebar-block .block-content .hasSubCategory {
+    text-align: right;
+}
+
+    .sidebar-3 .sidebar-block .block-content .hasSubCategory .arrow {
+        right: unset;
+        left: 0;
+    }
+
+    .sidebar-3 .sidebar-block .block-content .hasSubCategory .subCategory .cateTitle {
+        direction: rtl;
+    }
+
+        .sidebar-3 .sidebar-block .block-content .hasSubCategory .subCategory .cateTitle .cateItem::before {
+            margin-left: 20px;
+            margin-right: unset;
+        }
+
+#product-sidebar-left .main-content .content .product-container h1 {
+    text-align: right;
+    font-family: IRANSansWebFaNum;
+    direction: rtl;
+}
+
+#product-sidebar-left .main-content .content .product-container .nav-top p {
+    direction: rtl;
+}
+
+#product-sidebar-left .main-content .content .product-container .nav-top .products-sort-order .select-title {
+    direction: rtl;
+    padding: 8px 8px 8px 0;
+}
+
+.tab-content .item .product-miniature .product-description .product-groups {
+    direction: rtl;
+    /*text-align: right;*/
+}
+
+#product-sidebar-left .main-content .content .product-container .tab-content #list .item .product-miniature .product-description .info-stock {
+    float: left;
+}
+
+.tab-content .item .product-miniature .product-description .product-buttons {
+    direction: rtl;
+}
+
+#product-detail .content .main-product-detail h2 {
+    text-align: right;
+}
+
+#product-detail .content .main-product-detail .product-info .detail-description .price-del .price {
+    direction: rtl;
+    font-family: IRANSansWebFaNum;
+}
+
+.price-del {
+    text-align: right;
+    direction: rtl;
+}
+
+#product-detail .content .main-product-detail .product-info .detail-description .description {
+    text-align: right;
+    direction: rtl;
+}
+
+#product-detail .content .main-product-detail .product-info .detail-description .has-border {
+    direction: rtl;
+    text-align: right;
+}
+
+.quantity, .quantity span.control-label {
+    float: right;
+    direction: rtl;
+}
+
+.btn-group a {
+    margin-left: 30px;
+    margin-right: unset;
+}
+
+.quantity span.control-label {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+#product-detail .content .main-product-detail .review ul {
+    direction: rtl;
+    text-align: right;
+}
+
+/*.tab-content {
+    text-align: right;
+    direction: rtl;
+}*/
+
+.ratings {
+    float: right;
+}
+
+.title-product h2 {
+    font-family: IRANSansWebFaNum;
+}
+
+#product-detail .content .main-product-detail .review ul li {
+    margin-left: 45px;
+    margin-right: unset;
+}
+
+.arrow {
+    left: 0;
+    right: unset;
+}
+
+#product-detail .content .main-product-detail .review #review {
+    text-align: right;
+}
+
+    #product-detail .content .main-product-detail .review #review .spr-form-input, #product-detail .content .main-product-detail .review #review .spr-form-review-body textarea {
+        text-align: right;
+    }
+
+#blog-detail .main-blogs h1 {
+    color: #222;
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    margin-top: 3px;
+    text-align: right;
+    direction: rtl;
+}
+
+#blog-detail .main-blogs p {
+    text-align: justify;
+    direction: rtl;
+}
+
+#blog-detail .main-blogs h3, dl, ol, ul {
+    text-align: right;
+    direction: rtl;
+}
+
+.blog #wrapper-site #content-wrapper #main .content .main-blogs h2 {
+    font-family: IRANSansWebFaNum;
+    text-align: right;
+    direction: rtl;
+}
+
+#blog-detail .main-blogs .submit-comment {
+    text-align: right;
+}
+
+    #blog-detail .main-blogs .submit-comment .form-control {
+        text-align: right;
+        direction: rtl;
+    }
+
+.content-title {
+    text-align: right;
+    direction: rtl;
+}
+
+.blog #wrapper-site #content-wrapper #main .content .sidebar-3 .sidebar-block .post-item-content .first-child {
+    text-align: justify;
+    direction: rtl;
+}
+
+.blog #wrapper-site #content-wrapper #main .content .sidebar-3 .late-item span i {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+.blog #wrapper-site #content-wrapper #main .content .main-blogs h1 {
+    color: #222;
+    font-family: IRANSansWebFaNum;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.blog #wrapper-site #content-wrapper #main .content .main-blogs .late-item .post-info {
+    text-align: right;
+    direction: rtl;
+}
+
+    .blog #wrapper-site #content-wrapper #main .content .main-blogs .late-item .post-info span {
+        border-right: unset;
+        border-left: 1px solid #ccc;
+        margin-left: 8px;
+        padding-left: 8px;
+        margin-right: unset;
+        padding-right: unset;
+    }
+
+.description {
+    text-align: justify;
+    direction: rtl;
+}
+
+.recent-post .item-post .thumbnail-img a img {
+    height: 235px;
+}
+
+.active-color {
+    border: 3px solid gray;
+    width: 20px;
+}
+
+.menu-banner .verticalmenu .menu li a {
+    font-family: IRANSansWebFaNum;
+}
+.blue{
+    color:blue;
+}
+#product-cart #main {
+    margin: 5rem 0;
+}
+.product-cart #cart .cart-grid .cart-items .cart-item .label, .product-cart #cart .cart-grid .cart-items .cart-item .product-price {
+    font-family: IRANSansWebFaNum;
+}
+.checkout-cart .cart-grid-right .cart-summary
+{
+    text-align:right;
+    direction:rtl;
+}
+    .checkout-cart .cart-grid-right .cart-summary .cart-summary-line::before
+    {
+        right:0;
+        left:unset;
+    }
+    .checkout-cart .cart-grid-right .cart-summary .cart-summary-line
+    {
+        padding-right:20px;
+        padding-left:unset;
+    }

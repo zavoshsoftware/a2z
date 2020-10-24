@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "ورود";
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+<!-- Preloader -->
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper" class="full-width">
+            <div id="main">
+                <div class="page-home">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>صفحه اصلی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>ورود</span>
+                                        </a>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 main-login">
+                                    <div class="login-form">
+                                        @Html.Partial("_LoginPartial")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

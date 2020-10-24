@@ -1,0 +1,1009 @@
+﻿@model ViewModels.HomeViewModel
+@{
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+
+
+
+<!-- main content -->
+<div class="main-content">
+    <div class="wrap-banner">
+        <!-- menu category -->
+        <div class="container position">
+            <div class="section menu-banner d-xs-none">
+                <div class="tiva-verticalmenu block">
+                    <div class="box-content">
+                        <div class="verticalmenu" role="navigation">
+                            <ul class="menu level1">
+                                @foreach (var productGroup in Model.SliderMenu)
+                                {
+                                    <li class="item parent">
+                                        <a href="#" class="hasicon" title="@productGroup.Parent.Title">
+                                            <img src="/Content/img/home/armchair.png" alt="img">@productGroup.Parent.Title
+                                        </a>
+                                        @foreach(var child in productGroup.Child)
+                                        {
+                                            
+                                            <div class="dropdown-menu">
+                                                <div class="menu-items">
+                                                    <ul>
+                                                        <li class="item">
+                                                            <a href="/product/list/@child.UrlParam" title="@child.Title">@child.Title</a>
+                                                        </li>
+                                                      
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        }
+                                    </li>
+                                }
+                              
+                              
+                               
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slide show -->
+        <div class="section banner">
+            <div class="tiva-slideshow-wrapper">
+                <div id="tiva-slideshow" class="nivoSlider">
+                    <a href="#">
+                        <img class="img-responsive" src="/Content/img/home/home1-banner1.jpg" title="#caption1" alt="Slideshow image">
+                    </a>
+                    <a href="#">
+                        <img class="img-responsive" src="/Content/img/home/home1-banner2.jpg" title="#caption2" alt="Slideshow image">
+                    </a>
+                    <a href="#">
+                        <img class="img-responsive" src="/Content/img/home/home1-banner3.jpg" title="#caption3" alt="Slideshow image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div id="wrapper-site">
+        <div id="content-wrapper" class="full-width">
+            <div id="main">
+                <section class="page-home">
+                    <div class="container">
+
+                        <!-- delivery form -->
+                        <div class="section policy-home col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="block">
+                                        <div class="block-content">
+                                            <div class="policy-item">
+                                                <div class="policy-content iconpolicy1">
+                                                    <img src="/Content/img/home/home1-policy.png" alt="img">
+                                                    <div class="policy-name mb-5">نیم قرن تجربه</div>
+                                                    <div class="policy-des">بیش از نیم قرن خاطرات شیرین</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tiva-html col-lg-4 col-md-4">
+                                    <div class="block">
+                                        <div class="block-content">
+                                            <div class="policy-item">
+                                                <div class="policy-content iconpolicy2">
+                                                    <img src="/Content/img/home/home1-policy2.png" alt="img">
+                                                    <div class="policy-name mb-5">تحویل فوری</div>
+                                                    <div class="policy-des">تحویل در کوتاهترین زمان ممکن</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tiva-html col-lg-4 col-md-4">
+                                    <div class="block">
+                                        <div class="block-content">
+                                            <div class="policy-item">
+                                                <div class="policy-content iconpolicy3">
+                                                    <img src="/Content/img/home/home1-policy3.png" alt="img">
+                                                    <div class="policy-name mb-5">گارانتی محصولات</div>
+                                                    <div class="policy-des">محصولات هوگر را با گارانتی دریافت کنید</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product living room -->
+                    <div class="section living-room">
+                        <div class="container">
+                            <div class="tiva-row-wrap row">
+                                <div class="groupcategoriestab-vertical col-md-12 col-xs-12">
+                                    <div class="grouptab row">
+                                        <div class="categoriestab-left product-tab col-md-9 flex-9">
+                                            <div class="title-tab-content d-flex justify-content-start">
+                                                <ul class="nav nav-tabs">
+
+                                                    <li>
+                                                        <a href="#upseller" data-toggle="tab">پرفروش ترین محصولات</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#vip" data-toggle="tab">محصولات سفارشی</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#new" data-toggle="tab" class="active">جدیدترین محصولات</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div id="new" class="tab-pane fade in active show">
+                                                    <div class="category-product-index owl-carousel owl-theme owl-loaded owl-drag">
+                                                        @foreach (var product in Model.RecentProducts)
+                                                            {
+                                                            <div class="item text-center">
+                                                                <div class="product-miniature first-item js-product-miniature item-one">
+                                                                    <div class="thumbnail-container">
+                                                                        <a href="/product/@product.UrlParam">
+                                                                            <img class="img-fluid image-cover" src="@product.ImageUrl" alt="img">
+                                                                            <img class="img-fluid image-secondary" src="@product.ImageUrl" alt="img">
+                                                                        </a>
+                                                                        @*<div class="product-flags discount">-30%</div>*@
+                                                                        <div class="highlighted-informations">
+                                                                            <div class="variant-links">
+                                                                                <a href="#" class="color beige" title="Beige"></a>
+                                                                                <a href="#" class="color orange" title="Orange"></a>
+                                                                                <a href="#" class="color green" title="Green"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-description">
+                                                                        <div class="product-groups">
+                                                                            <div class="product-title">
+                                                                                <a href="/product/@product.UrlParam">@product.Title</a>
+                                                                            </div>
+                                                                            <div class="rating">
+                                                                                <div class="star-content">
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-group-price">
+                                                                                <div class="product-price-and-shipping">
+                                                                                    <span class="price">@string.Format("{0:n0}",product.Amount)</span>
+                                                                                    @*<del class="regular-price">850</del>*@
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-buttons d-flex justify-content-center">
+                                                                            <form action="index.html" method="post" class="formAddToCart">
+                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                </a>
+                                                                            </form>
+                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                            </a>
+                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            }
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="upseller">
+                                                    <div class="category-product-index owl-carousel owl-theme">
+                                                        @foreach (var product in Model.UpSellerProducts)
+                                                            {
+                                                            <div class="item text-center">
+                                                                <div class="product-miniature js-product-miniature item-one first-item">
+                                                                    <div class="thumbnail-container">
+                                                                        <a href="/product/@product.UrlParam">
+                                                                            <img class="img-fluid image-cover" src="@product.ImageUrl" alt="img">
+                                                                            <img class="img-fluid image-secondary" src="@product.ImageUrl" alt="img">
+                                                                        </a>
+                                                                        @*<div class="product-flags discount">-30%</div>*@
+                                                                        <div class="highlighted-informations">
+                                                                            <div class="variant-links">
+                                                                                <a href="#" class="color beige" title="Beige"></a>
+                                                                                <a href="#" class="color orange" title="Orange"></a>
+                                                                                <a href="#" class="color green" title="Green"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-description">
+                                                                        <div class="product-groups">
+                                                                            <div class="product-title">
+                                                                                <a href="/product/@product.UrlParam">@product.Title</a>
+                                                                            </div>
+                                                                            <div class="rating">
+                                                                                <div class="star-content">
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-group-price">
+                                                                                <div class="product-price-and-shipping">
+                                                                                    <span class="price">@string.Format("{0:n0}", product.Amount)</span>
+                                                                                    @*<del class="regular-price">1250</del>*@
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-buttons d-flex justify-content-center">
+                                                                            <form action="index.html" method="post" class="formAddToCart">
+                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                </a>
+                                                                            </form>
+                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                            </a>
+                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            }
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="vip">
+                                                    <div class="category-product-index owl-carousel owl-theme">
+                                                        @foreach (var product in Model.VipProducts)
+                                                            {
+                                                            <div class="item text-center">
+                                                                <div class="product-miniature first-item js-product-miniature item-one">
+                                                                    <div class="thumbnail-container">
+                                                                        <a href="/product/@product.UrlParam">
+                                                                            <img class="img-fluid image-cover" src="@product.ImageUrl" alt="img">
+                                                                            <img class="img-fluid image-secondary" src="@product.ImageUrl" alt="img">
+                                                                        </a>
+                                                                        @*<div class="product-flags discount">-30%</div>*@
+                                                                        <div class="highlighted-informations">
+                                                                            <div class="variant-links">
+                                                                                <a href="#" class="color beige" title="Beige"></a>
+                                                                                <a href="#" class="color orange" title="Orange"></a>
+                                                                                <a href="#" class="color green" title="Green"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-description">
+                                                                        <div class="product-groups">
+                                                                            <div class="product-title">
+                                                                                <a href="/product/@product.UrlParam">@product.Title</a>
+                                                                            </div>
+                                                                            <div class="rating">
+                                                                                <div class="star-content">
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                    <div class="star"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="product-group-price">
+                                                                                <div class="product-price-and-shipping">
+                                                                                    <span class="price">@string.Format("{0:n0}", product.Amount)</span>
+                                                                                    @*<del class="regular-price">850</del>*@
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-buttons d-flex justify-content-center">
+                                                                            <form action="index.html" method="post" class="formAddToCart">
+                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                </a>
+                                                                            </form>
+                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                            </a>
+                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="categoriestab-right col-lg-3 align-items-start d-flex flex-column col-md-3 flex-3">
+                                            <div class="block-title-content">
+                                                <h2 class="title-block">
+                                                    هوگر
+                                                </h2>
+                                            </div>
+                                            <!-- <div class="btn dropdown-toggle toggle-cate-child-vertical hidden-md-up mr-auto">Select category</div> -->
+                                            <div class="cate-child-vertical">
+                                                <ul class="d-flex align-items-start flex-column">
+                                                    @foreach (var cat in Model.ProductGroupCategory)
+                                                        {
+                                                        <li>
+                                                            <a href="/product/list/@cat.UrlParam">@cat.Title</a>
+                                                        </li>
+                                                        }
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <!-- banner -->
+                        <div class="section spacing-10 group-image-special col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="effect">
+                                        <a href="#">
+                                            <img class="img-fluid" src="/Content/img/home/effect1.jpg" alt="banner-1" title="banner-1">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="effect">
+                                        <a href="#">
+                                            <img class="img-fluid" src="/Content/img/home/effect2.jpg" alt="banner-2" title="banner-2">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- best seller -->
+                        <div class="section best-sellers col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="groupproductlist">
+                                        <div class="row d-flex align-items-center">
+                                            <!-- column 4 -->
+                                            <div class="flex-4 col-lg-4 flex-4">
+                                                <h2 class="title-block">
+                                                    <span class="sub-title">مبلمان باغی ویلایی فضای باز، صندلی رستوران و کافی شاپ</span>پرفروش ترین ها
+                                                </h2>
+                                                <div class="content-text">
+                                                    <p>
+                                                        برای دیدن از انواع مبلمان فضای باز، صندلی کافی شاپ، صندلی رستوران، قفس ها، تاب ها و جاگلی ها روی دسته بندی مربوطه کلیک فرمایید
+                                                    </p>
+                                                    <div>
+                                                        <a href="#"> مشاهده همه محصولات </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- column 8 -->
+                                            <div class="block-content col-lg-8 flex-8">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade in active show">
+                                                        <div class="category-product-index owl-carousel owl-theme owl-loaded owl-drag">
+                                                            @{
+                                                                int count = Model.UpSellerProducts.Count;
+
+                                                                int rem = (count / 2) + 1;
+
+                                                                for (int i = 0; i < rem; i++)
+                                                                {
+
+                                                                    <div class="item text-center">
+                                                                        @{
+                                                                            //int skipCount=(i+1)
+                                                                            var d = Model.UpSellerProducts.OrderBy(c => c.Order).Skip(i).Take(2);
+                                                                            foreach (var item in d)
+                                                                            {
+                                                                                <div class="product-miniature js-product-miniature item-one first-item">
+                                                                                    <div class="thumbnail-container">
+                                                                                        <a href="/product/@item.UrlParam">
+                                                                                            <img class="img-fluid image-cover" src="@item.ImageUrl" alt="img">
+                                                                                            <img class="img-fluid image-secondary" src="@item.ImageUrl" alt="img">
+                                                                                        </a>
+                                                                                        <div class="highlighted-informations">
+                                                                                            <div class="variant-links">
+                                                                                                <a href="#" class="color beige" title="Beige"></a>
+                                                                                                <a href="#" class="color orange" title="Orange"></a>
+                                                                                                <a href="#" class="color green" title="Green"></a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="product-description">
+                                                                                        <div class="product-groups">
+                                                                                            <div class="product-title">
+                                                                                                <a href="/product/@item.UrlParam">@item.Title</a>
+                                                                                            </div>
+                                                                                            <div class="product-group-price">
+                                                                                                <div class="product-price-and-shipping">
+                                                                                                    <span class="price">@string.Format("{0:n0}",item.Amount) تومان</span>
+                                                                                                    @*<del class="regular-price">950</del>*@
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="product-buttons d-flex justify-content-center">
+                                                                                            <form action="index.html" method="post" class="formAddToCart">
+                                                                                                <input type="hidden" name="id_product" value="1">
+                                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                                </a>
+                                                                                            </form>
+                                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                                            </a>
+                                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            }
+
+
+                                                                        }
+                                                                       
+                                                                     
+                                                                    </div>
+
+
+                                                                }
+                                                            }
+                                                         
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product kitchen -->
+                    <!-- banner -->
+                    <div class="container">
+                        @*<div class="section spacing-10 group-image-special col-lg-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="effect">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/Content/img/home/effect3.jpg" alt="banner-1" title="banner-1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="effect">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/Content/img/home/effect4.jpg" alt="banner-2" title="banner-2">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+
+                        <!-- testimonial -->
+                        <div class="section testimonial-block col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 ">
+                                    <div class="block">
+                                        <div class="owl-carousel owl-theme testimonial-type-one">
+                                            @foreach (var text in Model.MiddleSliderText)
+                                            {
+                                                <div class="item type-one d-flex align-items-center flex-column">
+                                                    <div class="textimonial-image">
+                                                        <i class="icon-testimonial"></i>
+                                                    </div>
+                                                    <div class="desc-testimonial">
+                                                        <div class="testimonial-content">
+                                                            <div class="text">
+                                                                <p>
+                                                                    @Html.Raw(text.Body)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHOP THE LOOK -->
+                    <div class="section spacing-10 groupbanner-special ">
+                        <div class="title-block">
+                            <span class="sub-title">  تولیدکننده انواع مبلمان </span>
+                            <span>هوگر</span>
+                            <span>
+                                از سال 1345
+                                <br>بیش از نیم قرن تجربه
+                                <br>تولید گسترده
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <div class="tiva-lookbook default col-lg-6 col-md-6 col-xs-12">
+                                <div class="row">
+                                    <div class="items col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="tiva-content-lookbook">
+                                            <img class="img-fluid img-responsive" src="/Content/img/home/home1-tolltip1.jpg" alt="lookbook">
+
+                                            <div class="item-lookbook item1">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item2">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook  d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/4.jpg" alt="contrary-to-popular-belief">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">مبلمان باغی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                890
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Module Lookbooks -->
+                            <div class="tiva-lookbook default  col-lg-6 col-md-6 col-xs-12">
+                                <div class="row">
+                                    <div class="items col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="tiva-content-lookbook">
+                                            <img class="img-fluid img-responsive" src="/Content/img/home/home1-tolltip2.jpg" alt="lookbook">
+
+                                            <div class="item-lookbook item3">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook  d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/3.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">مبلمان باغی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                980
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item4">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook  d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/2.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">مبلمان باغی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                780
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item5">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook  d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+
+                                                                <img src="/Images/Product/1.jpg" alt="mug-the-adventure-begins">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">مبلمان باغی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                680
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-lookbook">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Module Lookbooks -->
+                            <div class="tiva-lookbook default  col-lg-6 col-md-6 col-xs-12">
+                                <div class="row">
+                                    <div class="items col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="tiva-content-lookbook">
+                                            <img class="img-fluid img-responsive" src="/Content/img/home/home1-tolltip3.jpg" alt="lookbook">
+
+                                            <div class="item-lookbook item6">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item7">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item8">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-lookbook">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Module Lookbooks -->
+                            <div class="tiva-lookbook default  col-lg-6 col-md-6 col-xs-12">
+                                <div class="row">
+                                    <div class="items col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="tiva-content-lookbook">
+                                            <img class="img-fluid img-responsive" src="/Content/img/home/home1-tolltip4.jpg" alt="lookbook">
+
+                                            <div class="item-lookbook item9">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item10">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-lookbook item11">
+                                                <span class="number-lookbook">+</span>
+                                                <div class="content-lookbook">
+                                                    <div class="main-lookbook d-flex align-items-center">
+                                                        <div class="item-thumb">
+                                                            <a href="product-detail.html">
+                                                                <img src="/Images/Product/5.jpg" alt="lorem-ipsum-dolor-sit-amet">
+                                                            </a>
+                                                        </div>
+                                                        <div class="content-bottom">
+                                                            <div class="item-title">
+                                                                <a href="#">صندلی آلومینیومی</a>
+                                                            </div>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                650
+                                                            </div>
+                                                            <div class="readmore">
+                                                                <a href="#">اطلاعات بیشتر</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-lookbook">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- recent posts -->
+                    <div class="container">
+                        <div class="section recent-post">
+                            <div class="title-block">بلاگ</div>
+                            <div class="row">
+                                @foreach (var blog in Model.Blogs)
+                                    {
+                                    <div class="col-md-4">
+                                        <div class="item-post">
+                                            <div class="thumbnail-img">
+                                                <a href="/blog/@blog.UrlParam">
+                                                    <img src="@blog.ImageUrl" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <div class="post-info">
+
+                                                    <span class="datetime">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        <span>@blog.CreationDate.ToShortDateString()</span>
+                                                    </span>
+                                                </div>
+                                                <div class="post-title">
+                                                    <a href="/blog/@blog.UrlParam">@blog.Title</a>
+                                                </div>
+                                                <div class="post-desc">
+                                                    @Html.Raw(blog.Summery)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

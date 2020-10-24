@@ -1,0 +1,287 @@
+﻿@model ViewModels.ProductListViewModel
+@{
+
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper" class="full-width">
+            <div id="main">
+                <div class="page-home">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>صفحه اصلی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>لیست محصولات</span>
+                                        </a>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="sidebar-3 sidebar-collection col-lg-3 col-md-4 col-sm-4">
+
+                                    <!-- category menu -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">دسته بندی محصولات</div>
+                                        <div class="block-content">
+                                            @foreach (var category in Model.Categories)
+                                            {
+                                                <div class="cateTitle hasSubCategory open level1">
+                                                    @if (category.Child.Count() > 0)
+                                                    {
+                                                        <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#@category.Parent.Id" aria-expanded="false" role="status">
+                                                            <i class="zmdi zmdi-minus"></i>
+                                                            <i class="zmdi zmdi-plus"></i>
+                                                        </span>
+                                                    }
+                                                    <a class="cateItem" href="/product/list/@category.Parent.UrlParam">@category.Parent.Title </a>
+                                                    <div class="subCategory collapse" id="@category.Parent.Id" aria-expanded="true" role="status">
+                                                        @foreach (var product in category.Child)
+                                                        {
+                                                            <div class="cateTitle">
+                                                                <a href="/product/@product.UrlParam" class="cateItem">@product.Title  </a>
+                                                                @*<div class="subCategory collapse" id="subCategory-fruits" aria-expanded="true" role="status">
+
+                                                                        <div class="cateTitle">
+                                                                            <a href="/product/@product.UrlParam" class="cateItem">@product.Title</a>
+                                                                        </div>
+
+
+                                                                    </div>*@
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-8 col-lg-9 col-md-8 product-container">
+                                    <h1>مبلمان ویلایی فلزی</h1>
+                                    <div class="js-product-list-top firt nav-top">
+                                        <div class="d-flex justify-content-around row">
+                                            <div class="col col-xs-12">
+                                                <ul class="nav nav-tabs">
+                                                    <li>
+                                                        <a href="#grid" data-toggle="tab" class="active show fa fa-th-large"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#list" data-toggle="tab" class="fa fa-list-ul"></a>
+                                                    </li>
+                                                </ul>
+                                                <div class="hidden-sm-down total-products">
+                                                    <p>8 محصول قابل نمایش وجود دارد</p>
+                                                </div>
+                                            </div>
+                                            <div class="col col-xs-12">
+                                                <div class="d-flex sort-by-row justify-content-lg-end justify-content-md-end">
+
+                                                    <div class="products-sort-order dropdown">
+                                                        <select class="select-title">
+                                                            <option value="">مرتب سازی براساس</option>
+                                                            <option value="">نام،صعودی </option>
+                                                            <option value="">نام, نزولی</option>
+                                                            <option value="">قیمت, صعودی</option>
+                                                            <option value="">قیمت, نزولی</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-content product-items">
+                                        <div id="grid" class="related tab-pane fade in active show">
+                                            <div class="row">
+                                                @foreach (var product in Model.products)
+                                                {
+                                                    <div class="item text-center col-md-4">
+                                                        <div class="product-miniature js-product-miniature item-one first-item">
+                                                            <div class="thumbnail-container border">
+                                                                <a href="/product/@product.UrlParam">
+                                                                    <img class="img-fluid image-cover" src="@product.ImageUrl" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="@product.ImageUrl" alt="img">
+                                                                </a>
+                                                                <div class="highlighted-informations">
+                                                                    <div class="variant-links">
+                                                                        <a href="#" class="color beige" title="Beige"></a>
+                                                                        <a href="#" class="color orange" title="Orange"></a>
+                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="/product/@product.UrlParam">@product.Title</a>
+                                                                    </div>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price">@string.Format("{0:n0}", product.Amount) تومان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-buttons d-flex justify-content-center">
+                                                                    <form action="index.html" method="post" class="formAddToCart">
+                                                                        <input type="hidden" name="id_product" value="1">
+                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                    </a>
+                                                                    <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div id="list" class="related tab-pane fade">
+                                            <div class="row">
+                                                @foreach (var product in Model.products)
+                                                {
+                                                <div class="item col-md-12">
+                                                    <div class="product-miniature item-one first-item">
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <div class="product-description">
+                                                                    <div class="product-groups text-right">
+                                                                        <div class="product-title">
+                                                                            <a href="/product/@product.UrlParam">@product.Title</a>
+                                                                            <span class="info-stock">
+                                                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                                                موجود
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="rating">
+                                                                            <div class="star-content">
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-group-price">
+                                                                            <div class="product-price-and-shipping">
+                                                                                <span class="price">@string.Format("{0:n0}",product.Amount)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="discription">
+                                                                            @Html.Raw(product.Summery)
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-buttons d-flex">
+                                                                        <form action="index.html" method="post" class="formAddToCart">
+                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>افزودن به سبد خرید
+                                                                            </a>
+                                                                        </form>
+                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="thumbnail-container border">
+                                                                    <a href="/product/@product.UrlParam">
+                                                                        <img class="img-fluid image-cover" src="@product.ImageUrl" alt="img">
+                                                                        <img class="img-fluid image-secondary" src="@product.ImageUrl" alt="img">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- pagination -->
+                                    @*<div class="pagination">
+                                        <div class="js-product-list-top ">
+                                            <div class="d-flex justify-content-around row">
+                                                <div class="showing col col-xs-12">
+                                                    <span>نمایش 1-8 از 8 محصول</span>
+                                                </div>
+                                                <div class="page-list col col-xs-12">
+                                                    <ul>
+                                                        <li>
+                                                            <a rel="prev" href="#" class="previous disabled js-search-link">
+                                                                قبلی
+                                                            </a>
+                                                        </li>
+                                                        <li class="current active">
+                                                            <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                                1
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                                2
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                                3
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a rel="next" href="#" class="next disabled js-search-link">
+                                                                بعدی
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                </div>
+
+                                <!-- end col-md-9-1 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

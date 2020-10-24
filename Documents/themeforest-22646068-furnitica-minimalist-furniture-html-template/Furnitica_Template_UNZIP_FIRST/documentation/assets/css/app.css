@@ -1,0 +1,134 @@
+/*
+    Author: TivaTheme
+    Author URI: http://tivatheme.com/
+*/
+
+body{
+    letter-spacing: .01rem;
+    line-height: 1.6;
+}
+
+#documantation p,
+#documantation ul,
+#documantation ol {
+    margin: 0 0 20px;
+}
+
+a {
+	color: #0088cc;
+}	
+	
+img {
+    max-width: 100%;
+    height: auto;
+	margin: 10px 0 25px 0;
+    vertical-align: top;
+}
+
+img.border {
+    border: 1px solid #c8c8c8;
+}
+
+li {
+	margin-bottom: 8px;
+}
+
+main {
+    margin-top: 60px;
+}
+
+#content {
+    margin-top: 15px;
+}
+
+#header {
+    text-align: center;
+    background: #152837;
+}
+
+#header h2 {
+	color: #fff;
+    margin: 20px 0;
+}
+
+.theme-info {
+    margin-top: 30px;
+
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+
+.theme-info p{
+    margin-bottom: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.info {
+    background: #fafafa;
+}
+
+.border-right {
+    border-right: 1px solid #ccc;
+}
+
+#documantation {
+    margin-top: 30px;
+}
+
+.content-block{
+    padding-bottom: 30px;
+    border-bottom: 5px solid #f1f1f1;
+}
+
+.content-block:last-child{
+    border-bottom: none;
+}
+
+#sidebar{
+    padding-top: 60px;
+}
+
+.navbar{
+    padding-left: 15px;
+}
+
+#sidebar ul {
+    padding-left: 0;
+
+    list-style: none;
+}
+
+#sidebar ul li a {
+    display: block;
+
+    padding: 5px 10px;
+
+    text-decoration: none;
+
+    color: #666;
+    background: none !important;
+}
+
+#sidebar ul li.active {
+    margin-left: -2px;
+
+    border-left: 2px solid #0088cc;
+    font-size: 16px;
+}
+
+#sidebar ul li.active a,
+#sidebar ul li:hover a {
+    color: #0088cc;
+}
+
+@media( max-width: 768px ){
+   #sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #fff;
+   } 
+}

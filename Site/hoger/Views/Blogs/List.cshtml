@@ -1,0 +1,96 @@
+﻿@model ViewModels.BlogListViewModel
+@{
+   
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+            <div id="main">
+                <div class="page-home">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>صفحه اصلی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>@Model.BlogGroup.Title</span>
+                                        </a>
+                                    </li>
+                                  
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col main-blogs">
+                                    <h1 class="text-center col">@Model.BlogGroup.Title</h1>
+                                    <div class="row">
+                                        @foreach (var blog in Model.Blogs)
+                                        {
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="hover-after">
+                                                <a href="/blog/@blog.UrlParam">
+                                                    <img src="@blog.ImageUrl" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="late-item">
+                                                <p class="content-title">
+                                                    <a href="/blog/@blog.UrlParam">@blog.Title</a>
+                                                </p>
+                                                <p class="post-info">
+                                                    <span>@blog.CreationDate.ToShortDateString()</span>
+                                                    <span>@blog.BlogComments.Count() یادداشت</span>
+                                                </p>
+                                                <p class="description">
+                                                  @blog.Summery
+                                                    <span class="view-more">
+                                                        <a href="/blog/@blog.UrlParam">ادامه مطلب</a>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        }
+                                    </div>
+                                    @*<div class="page-list col">
+                                        <ul class="justify-content-center d-flex">
+                                            <li>
+                                                <a rel="prev" href="#" class="previous disabled js-search-link">
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            <li class="current active">
+                                                <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                    2
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a rel="next" href="#" class="next disabled js-search-link">
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

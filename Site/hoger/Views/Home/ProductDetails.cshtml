@@ -1,0 +1,665 @@
+﻿
+@{
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+            <div id="main">
+                <div class="page-home">
+
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>صفحه اصلی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>مبلمان ویلایی فلزی</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>صندلی باغی دایموند</span>
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+
+                                    <!-- category -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">دسته بندی محصولات</div>
+                                        <div class="block-content">
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#livingroom" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">مبلمان ویلایی </a>
+                                                <div class="subCategory collapse" id="livingroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان ویلایی </a>
+                                                        <div class="subCategory collapse" id="subCategory-fruits" aria-expanded="true" role="status">
+                                                            <div class="cateTitle">
+                                                                <a href="/Home/ProductList" class="cateItem">مبلمان ویلایی فلزی</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="/Home/ProductList" class="cateItem">مبلمان ویلایی حصیری</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="/Home/ProductList" class="cateItem"> آلومینیومی</a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان ویلایی فلزی</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان ویلایی حصیری</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem"> مبلمان ویلایی آلومینیومی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bathroom" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">مبلمان باغی</a>
+                                                <div class="subCategory collapse" id="bathroom" aria-expanded="false" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان باغی فلزی</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان باغی حصیری</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem"> مبلمان باغی آلومینیومی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#diningroom" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">مبلمان رستورانی</a>
+                                                <div class="subCategory collapse" id="diningroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان رستورانی فلزی</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">مبلمان رستورانی حصیری</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem"> مبلمان رستورانی آلومینیومی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bedroom" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">تاب ریلکسی</a>
+                                                <div class="subCategory collapse" id="bedroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">تاب ریلکسی یک نفره</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">تاب ریلکسی دو نفره</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#kitchen" aria-expanded="false" role="status">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">میزهای فضای باز</a>
+                                                <div class="subCategory collapse" id="kitchen" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">میز فلزی</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem">میز حصیری</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="/Home/ProductList" class="cateItem"> میز آلومینیومی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   
+                                </div>
+                                <div class="col-sm-8 col-lg-9 col-md-9">
+                                    <div class="main-product-detail">
+                                        <h2>صندلی باغی دایموند</h2>
+                                        <div class="product-single row">
+                                            <div class="product-info col-xs-12 col-md-7 col-sm-7">
+                                                <div class="detail-description">
+                                                    <div class="price-del">
+                                                        <span class="price">600،000 تومان</span>
+                                                        <span class="float-left">
+                                                            @*<span class="availb">موجود: </span>*@
+                                                            <span class="check">
+                                                                <i class="fa fa-check-square-o" aria-hidden="true"></i>موجود
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="description">
+                                                        صندلی فلزی باغی مناسب فضای باز 
+                                                    </p>
+                                                    <div class="option has-border d-lg-flex size-color">
+                                                        <div class="size">
+                                                            <span class="size">سایز :</span>
+                                                            <select>
+                                                                <option value="">انتخاب سایز</option>
+                                                                <option value="">M</option>
+                                                                <option value="">l</option>
+                                                                <option value="">xl</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="colors">
+                                                            <b class="title">رنگ : </b>
+                                                            <span class="blue"></span>
+                                                            <span class="yellow"></span>
+                                                            <span class="pink"></span>
+                                                            <span class="green"></span>
+                                                            <span class="brown"></span>
+                                                            <span class="red"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-border cart-area">
+                                                        <div class="product-quantity">
+                                                            <div class="qty">
+                                                                <div class="input-group">
+                                                                    <div class="quantity">
+                                                                        <span class="control-label">تعداد : </span>
+                                                                        <input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control">
+
+                                                                        <span class="input-group-btn-vertical">
+                                                                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
+                                                                                +
+                                                                            </button>
+                                                                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
+                                                                                -
+                                                                            </button>
+                                                                        </span>
+                                                                    </div>
+                                                                    <span class="add">
+                                                                        <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                            <span>افزودن به سبد خرید</span>
+                                                                        </button>
+                                                                        <a class="addToWishlist" href="#">
+                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                        <p class="product-minimal-quantity">
+                                                        </p>
+                                                    </div>
+                                                    <div class="d-flex2 has-border">
+                                                        <div class="btn-group">
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-share"></i>
+                                                                <span>اشتراک گذاری</span>
+                                                            </a>
+                                                            <a href="#" class="email">
+                                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                                <span>ارسال ایمیل</span>
+                                                            </a>
+                                                            <a href="#" class="print">
+                                                                <i class="zmdi zmdi-print"></i>
+                                                                <span>پرینت</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-comment has-border d-flex">
+                                                        <div class="review-description d-flex">
+                                                            <span>REVIEW :</span>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="read after-has-border">
+                                                            <a href="#review">
+                                                                <i class="fa fa-commenting-o color" aria-hidden="true"></i>
+                                                                <span>نظر (3)</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="apen after-has-border">
+                                                            <a href="#review">
+                                                                <i class="fa fa-pencil color" aria-hidden="true"></i>
+                                                                <span>افزودن نظر</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                            <div class="product-detail col-xs-12 col-md-5 col-sm-5">
+                                                <div class="page-content" id="content">
+                                                    <div class="images-container">
+                                                        <div class="js-qv-mask mask tab-content border">
+                                                            <div id="item1" class="tab-pane fade active in show">
+                                                                <img src="/Images/Product/Diamond-3.jpg" alt="img">
+                                                            </div>
+                                                            <div id="item2" class="tab-pane fade">
+                                                                <img src="/Images/Product/Diamond-4.jpg" alt="img">
+                                                            </div>
+                                                            <div id="item3" class="tab-pane fade">
+                                                                <img src="/Images/Product/Diamond-5.jpg" alt="img">
+                                                            </div>
+                                                            <div id="item4" class="tab-pane fade">
+                                                                <img src="/Images/Product/Diamond-6.jpg" alt="img">
+                                                            </div>
+                                                            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+                                                                <i class="fa fa-expand"></i>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="product-tab nav nav-tabs d-flex">
+                                                            <li class="active col">
+                                                                <a href="#item1" data-toggle="tab" aria-expanded="true" class="active show">
+                                                                    <img src="/Images/Product/Diamond-3.jpg" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item2" data-toggle="tab">
+                                                                    <img src="/Images/Product/Diamond-4.jpg" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item3" data-toggle="tab">
+                                                                    <img src="/Images/Product/Diamond-5.jpg" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item4" data-toggle="tab">
+                                                                    <img src="/Images/Product/Diamond-6.jpg" alt="img">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="modal fade" id="product-modal" role="dialog">
+                                                            <div class="modal-dialog">
+
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <div class="modal-body">
+                                                                            <div class="product-detail">
+                                                                                <div>
+                                                                                    <div class="images-container">
+                                                                                        <div class="js-qv-mask mask tab-content">
+                                                                                            <div id="modal-item1" class="tab-pane fade active in show">
+                                                                                                <img src="/Images/Product/Diamond-3.jpg" alt="img">
+                                                                                            </div>
+                                                                                            <div id="modal-item2" class="tab-pane fade">
+                                                                                                <img src="/Images/Product/Diamond-4.jpg" alt="img">
+                                                                                            </div>
+                                                                                            <div id="modal-item3" class="tab-pane fade">
+                                                                                                <img src="/Images/Product/Diamond-5.jpg" alt="img">
+                                                                                            </div>
+                                                                                            <div id="modal-item4" class="tab-pane fade">
+                                                                                                <img src="/Images/Product/Diamond-6.jpg" alt="img">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <ul class="product-tab nav nav-tabs">
+                                                                                            <li class="active">
+                                                                                                <a href="#modal-item1" data-toggle="tab" class=" active show">
+                                                                                                    <img src="/Images/Product/Diamond-3.jpg" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#modal-item2" data-toggle="tab">
+                                                                                                    <img src="/Images/Product/Diamond-4.jpg" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#modal-item3" data-toggle="tab">
+                                                                                                    <img src="/Images/Product/Diamond-5.jpg" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#modal-item4" data-toggle="tab">
+                                                                                                    <img src="/Images/Product/Diamond-6.jpg" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="review">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#description" class="active show">توضیحات</a>
+                                                </li>
+                                              
+                                                <li>
+                                                    <a data-toggle="tab" href="#review">نظرات (2)</a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div id="description" class="tab-pane fade in active show">
+                                                    <p>
+                                                        صندلی مناسب رستورانها و کافی شاپها و همچنین تراس و بالکن.
+                                                    </p>
+                                                    <p> این صندلی ساخته شده بر اساس یک مدل شناخته شده بین المللی به نام برتویا دایموند می باشد.
+                                                    </p>
+                                                   
+                                                </div>
+
+                                                <div id="review" class="tab-pane fade">
+                                                    <div class="spr-form">
+                                                        <div class="user-comment">
+                                                            <div class="spr-review">
+                                                                <div class="spr-review-header">
+                                                                    <span class="spr-review-header-byline">
+                                                                        <strong>علی رضایی</strong> -
+                                                                        <span>14 اردیبهشت 1398</span>
+                                                                    </span>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="spr-review-content">
+                                                                    <p class="spr-review-content-body">
+                                                                       من از این مدل صندلی خریداری کردم و خیلی راضی هستم
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="spr-review">
+                                                                <div class="spr-review-header">
+                                                                    <span class="spr-review-header-byline">
+                                                                        <strong>علی رضایی</strong> -
+                                                                        <span>14 اردیبهشت 1398</span>
+                                                                    </span>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="spr-review-content">
+                                                                    <p class="spr-review-content-body">
+                                                                        من از این مدل صندلی خریداری کردم و خیلی راضی هستم
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <form method="post" action="index.html" class="new-review-form">
+                                                        <input type="hidden" name="review[rating]" value="3">
+                                                        <input type="hidden" name="product_id">
+                                                        <h3 class="spr-form-title">ارسال نظر</h3>
+                                                        <fieldset>
+                                                            <div class="spr-form-review-rating">
+                                                                <label class="spr-form-label">نظر شما</label>
+                                                                <fieldset class="ratings">
+                                                                    <input type="radio" id="star5" name="rating" value="5" />
+                                                                    <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                                                    <input type="radio" id="star4half" name="rating" value="4 and a half" />
+                                                                    <input type="radio" id="star4" name="rating" value="4" />
+                                                                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                                                                    <input type="radio" id="star3half" name="rating" value="3 and a half" />
+                                                                    <input type="radio" id="star3" name="rating" value="3" />
+                                                                    <label class="full" for="star3" title="Meh - 3 stars"></label>
+                                                                    <input type="radio" id="star2half" name="rating" value="2 and a half" />
+                                                                    <input type="radio" id="star2" name="rating" value="2" />
+                                                                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                                    <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                                                                    <input type="radio" id="star1" name="rating" value="1" />
+                                                                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                                                    <input type="radio" id="starhalf" name="rating" value="half" />
+                                                                </fieldset>
+                                                            </div>
+                                                        </fieldset>
+                                                        <fieldset class="spr-form-contact">
+                                                            <div class="spr-form-contact-name">
+                                                                <input class="spr-form-input spr-form-input-text form-control" value="" placeholder="نام و نام خانوادگی">
+                                                            </div>
+                                                            <div class="spr-form-contact-email">
+                                                                <input class="spr-form-input spr-form-input-email form-control" value="" placeholder="ایمیل">
+                                                            </div>
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <div class="spr-form-review-body">
+                                                                <div class="spr-form-input">
+                                                                    <textarea class="spr-form-input-textarea" rows="10" placeholder="پیغام"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="submit">
+                                                            <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="ارسال نظر">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="related">
+                                            <div class="title-tab-content  text-center">
+                                                <div class="title-product justify-content-start">
+                                                    <h2>محصولات مرتبط</h2>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="row">
+                                                    <div class="item text-center col-md-4">
+                                                        <div class="product-miniature js-product-miniature item-one first-item">
+                                                            <div class="thumbnail-container border border">
+                                                                <a href="#">
+                                                                    <img class="img-fluid image-cover" src="/Images/Product/10.jpg" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="/Images/Product/11.jpg" alt="img">
+                                                                </a>
+                                                                <div class="highlighted-informations">
+                                                                    <div class="variant-links">
+                                                                        <a href="#" class="color beige" title="Beige"></a>
+                                                                        <a href="#" class="color orange" title="Orange"></a>
+                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="#">صندلی باغی فلزی</a>
+                                                                    </div>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price">450،000 تومان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-buttons d-flex justify-content-center">
+                                                                    <form action="index.html" method="post" class="formAddToCart">
+                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                    </a>
+                                                                    <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item text-center col-md-4">
+                                                        <div class="product-miniature js-product-miniature item-one first-item">
+                                                            <div class="thumbnail-container border border">
+                                                                <a href="#">
+                                                                    <img class="img-fluid image-cover" src="/Images/Product/11.jpg" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="/Images/Product/12.jpg" alt="img">
+                                                                </a>
+                                                                <div class="highlighted-informations">
+                                                                    <div class="variant-links">
+                                                                        <a href="#" class="color beige" title="Beige"></a>
+                                                                        <a href="#" class="color orange" title="Orange"></a>
+                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="#">صندلی باغی فلزی</a>
+                                                                    </div>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price">450،000 تومان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-buttons d-flex justify-content-center">
+                                                                    <form action="index.html" method="post" class="formAddToCart">
+                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                    </a>
+                                                                    <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item text-center col-md-4">
+                                                        <div class="product-miniature js-product-miniature item-one first-item">
+                                                            <div class="thumbnail-container border border">
+                                                                <a href="#">
+                                                                    <img class="img-fluid image-cover" src="/Images/Product/13.jpg" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="/Images/Product/14.jpg" alt="img">
+                                                                </a>
+                                                                <div class="highlighted-informations">
+                                                                    <div class="variant-links">
+                                                                        <a href="#" class="color beige" title="Beige"></a>
+                                                                        <a href="#" class="color orange" title="Orange"></a>
+                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="#">صندلی باغی فلزی</a>
+                                                                    </div>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price">450،000 تومان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-buttons d-flex justify-content-center">
+                                                                    <form action="index.html" method="post" class="formAddToCart">
+                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                    </a>
+                                                                    <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
